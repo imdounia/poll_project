@@ -4,7 +4,7 @@
 
 {% block body %}
     <main style="padding: 2%;">
-    <h1> Résultat de la question : {{ question.textQuestion }} </h1>
+    <h1> Results of the question : {{ question.textQuestion }} </h1>
 
     <div style="margin-left: 2%; font-size: 20px">
         {% for reponse in reponses %}
@@ -12,9 +12,9 @@
         {% endfor %}
     </div>
 
-    <p> Nombre total de votes : {{ resultsTotal }} </p>
+    <p> Total number of votes : {{ resultsTotal }} </p>
 
-    <a href="{{ path('questions_index') }}"> <p style="margin-top: 2%; margin-left: 2%;"> Retour à la liste </p> </a>
+    <a href="{{ path('questions_index') }}"> <p style="margin-top: 2%; margin-left: 2%;"> back to list </p> </a>
 
     </main>
 {% endblock %}

@@ -3,6 +3,7 @@
 {% block title %}Reponses index{% endblock %}
 
 {% block body %}
+<main style="margin: 10%; text-align:center">
     <h1>Reponses index</h1>
 
     <table class="table">
@@ -32,4 +33,6 @@
     </table>
 
     <a href="{{ path('reponses_new', {'id': question.id}) }}">Create new</a>
+
+    </main>
 {% endblock %}
