@@ -1,14 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Poll</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="{{path('home')}}">Poll</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{{path('home')}}">Home</a>
-      </li>
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="{{path('questions_index')}}">Questions</a>
       </li>
@@ -20,27 +17,26 @@
             %}
         <ul class="navbar-nav ml-auto"> 
 
-        <li class="nav-item dropdown show">
-        <span class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Dropdown</span>
-        <div class="dropdown-menu show">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
+      <li class="nav-item">
+              <a class="nav-link" href="{{path('questions_index')}}">{{ app.user.username }}</a>
       </li>
-        
+      <li class="nav-item">
+      <li class="nav-item">
+      <a class="nav-link" href="/logout">
+      <img width="20px" height="auto" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3Qm94PSItMzQgMCA1MTIgNTEyIiB3aWR0aD0iNTEycHQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTE2NS45NDkyMTkgNTAyLjI2OTUzMS0xNTguNDQ5MjE5LTQxLjY5NTMxMnYtNDA5LjE0ODQzOGwxNTguNDQ5MjE5LTQxLjY5NTMxMnptMCAwIiBmaWxsPSIjZjhlODY4Ii8+PHBhdGggZD0ibTM3LjUgNDYwLjU3NDIxOXYtNDA5LjE0ODQzOGwxMjguNDQ5MjE5LTMzLjgwMDc4MXYtNy44OTQ1MzFsLTE1OC40NDkyMTkgNDEuNjk1MzEydjQwOS4xNDg0MzhsMTU4LjQ0OTIxOSA0MS42OTUzMTJ2LTcuODk0NTMxem0wIDAiIGZpbGw9IiNlMzljMmQiLz48cGF0aCBkPSJtMTMzLjUxNTYyNSAyNTZjMCAxMC41MzUxNTYtOC41MzkwNjMgMTkuMDcwMzEyLTE5LjA3MDMxMyAxOS4wNzAzMTItMTAuNTM1MTU2IDAtMTkuMDc0MjE4LTguNTM1MTU2LTE5LjA3NDIxOC0xOS4wNzAzMTJzOC41MzkwNjItMTkuMDcwMzEyIDE5LjA3NDIxOC0xOS4wNzAzMTJjMTAuNTMxMjUgMCAxOS4wNzAzMTMgOC41MzUxNTYgMTkuMDcwMzEzIDE5LjA3MDMxMnptMCAwIiBmaWxsPSIjZTVlYmY1Ii8+PHBhdGggZD0ibTMxNy4zMzIwMzEgMjIzLjk4ODI4MWgtMTUxLjM4MjgxMnY4MS42OTE0MDdoMTUxLjM4MjgxMnY0NS42OTkyMThsMTEzLjg5NDUzMS04Ni41NDY4NzUtMTEzLjg5NDUzMS04Ni41NDY4NzV6bTAgMCIgZmlsbD0iI2QxNTU3MyIvPjxwYXRoIGQ9Im0xNjUuOTQ5MjE5IDIyMy45ODgyODFoMzB2ODEuNjkxNDA3aC0zMHptMCAwIiBmaWxsPSIjYzIxZDQ0Ii8+PHBhdGggZD0ibTE2NS45NDkyMTkgNTYuODMyMDMxaDEwNC4yNDIxODd2MTY3LjE1NjI1aC0xMDQuMjQyMTg3em0wIDAiIGZpbGw9IiNlNWViZjUiLz48cGF0aCBkPSJtMTY1Ljk0OTIxOSAzMDUuNjc5Njg4aDEwNC4yNDIxODd2MTQ5LjQ4ODI4MWgtMTA0LjI0MjE4N3ptMCAwIiBmaWxsPSIjZTVlYmY1Ii8+PHBhdGggZD0ibTE2NS45NDkyMTkgNTYuODMyMDMxaDMwdjE2Ny4xNTYyNWgtMzB6bTAgMCIgZmlsbD0iI2NhZDhlYSIvPjxwYXRoIGQ9Im0xNjUuOTQ5MjE5IDMwNS42Nzk2ODhoMzB2MTQ5LjQ4ODI4MWgtMzB6bTAgMCIgZmlsbD0iI2NhZDhlYSIvPjxwYXRoIGQ9Im0xNjUuOTQ5MjE5IDMwNS42Nzk2ODhoNzEuODEyNXYxMTcuMDU4NTkzaC03MS44MTI1em0wIDAiIGZpbGw9IiM3Mjg2OWUiLz48cGF0aCBkPSJtMTY1Ljk0OTIxOSA4OS4yNjE3MTloNzEuODEyNXYxMzQuNzI2NTYyaC03MS44MTI1em0wIDAiIGZpbGw9IiM3Mjg2OWUiLz48cGF0aCBkPSJtMTY1Ljk0OTIxOSAzMDUuNjc5Njg4aDMwdjExNy4wNTg1OTNoLTMwem0wIDAiIGZpbGw9IiM1MzYyNzUiLz48cGF0aCBkPSJtMTY1Ljk0OTIxOSA4OS4yNjE3MTloMzB2MTM0LjcyNjU2MmgtMzB6bTAgMCIgZmlsbD0iIzUzNjI3NSIvPjxwYXRoIGQ9Im0yNzQuMjgxMjUgMjcyLjAyMzQzOGgtMTV2LTE1aDE1em0tMjUgMGgtMTV2LTE1aDE1em0wIDAiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJtMCA0NjYuMzU1NDY5IDE3My40NDkyMTkgNDUuNjQ0NTMxdi01MTJsLTE3My40NDkyMTkgNDUuNjQ0NTMxem0xNS00MDkuMTQ4NDM4IDE0My40NDkyMTktMzcuNzV2NDczLjA4NTkzOGwtMTQzLjQ0OTIxOS0zNy43NXptMCAwIi8+PHBhdGggZD0ibTExNC40NDUzMTIgMjI5LjQyNTc4MWMtMTQuNjUyMzQzIDAtMjYuNTc0MjE4IDExLjkyMTg3NS0yNi41NzQyMTggMjYuNTc0MjE5czExLjkyMTg3NSAyNi41NzQyMTkgMjYuNTc0MjE4IDI2LjU3NDIxOWMxNC42NTIzNDQgMCAyNi41NzAzMTMtMTEuOTIxODc1IDI2LjU3MDMxMy0yNi41NzQyMTlzLTExLjkxNzk2OS0yNi41NzQyMTktMjYuNTcwMzEzLTI2LjU3NDIxOXptMCAzOC4xNDQ1MzFjLTYuMzgyODEyIDAtMTEuNTc0MjE4LTUuMTg3NS0xMS41NzQyMTgtMTEuNTcwMzEyczUuMTkxNDA2LTExLjU3MDMxMiAxMS41NzQyMTgtMTEuNTcwMzEyYzYuMzc4OTA3IDAgMTEuNTcwMzEzIDUuMTg3NSAxMS41NzAzMTMgMTEuNTcwMzEycy01LjE5MTQwNiAxMS41NzAzMTItMTEuNTcwMzEzIDExLjU3MDMxMnptMCAwIi8+PHBhdGggZD0ibTI2Mi42OTE0MDYgMTk1Ljk4NDM3NWgxNXYtMTQ2LjY1MjM0NGgtODQuMjQyMTg3djE1aDY5LjI0MjE4N3ptMCAwIi8+PHBhdGggZD0ibTI2Mi42OTE0MDYgNDQ3LjY2Nzk2OWgtNjkuMjQyMTg3djE1aDg0LjI0MjE4N3YtMTI4Ljk4ODI4MWgtMTV6bTAgMCIvPjxwYXRoIGQ9Im00NDMuNjI1IDI2NC44MzIwMzEtMTMzLjc5Mjk2OS0xMDEuNjY0MDYydjUzLjMyMDMxMmgtMTE2LjM4MjgxMnYxNWgxMzEuMzgyODEydi0zOC4wODU5MzdsOTQgNzEuNDI5Njg3LTk0IDcxLjQyOTY4OHYtMzguMDgyMDMxaC0xMzEuMzgyODEydjE1aDExNi4zODI4MTJ2NTMuMzIwMzEyem0wIDAiLz48cGF0aCBkPSJtMjMwLjI1NzgxMiAxOTUuOTg0Mzc1aDE1LjAwMzkwN3YtMTE0LjIyMjY1NmgtNTEuODEyNXYxNWgzNi44MDg1OTN6bTAgMCIvPjxwYXRoIGQ9Im0yNDUuMjYxNzE5IDMzMy42Nzk2ODhoLTE1LjAwMzkwN3Y4MS41NTg1OTNoLTM2LjgwODU5M3YxNWg1MS44MTI1em0wIDAiLz48L3N2Zz4=" /> Log out</a></li>  
+      </li>
+         </ul>
         {% else %}
 
-      
+      <ul class="navbar-nav ml-auto"> 
       <li class="nav-item">
         <a class="nav-link" href="/login">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/register">Register</a>
       </li>
-    </ul>
+
+   </ul>
 
     {% endif %}
 
