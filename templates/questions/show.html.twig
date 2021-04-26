@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Questions{% endblock %}
+
+{% block body %}
+   <h1> {{ question.textQuestion }} </h1>
+
+    <form action="{{ path('questions_answer', {'id': question.id}) }}" method="post" style="margin-left: 2%;">
+        {% set input_type=question.isMultiple ? 'checkbox' : 'radio' %}
+
+        {% for reponse in reponses %}
+            <input type="{{input_type}}" name="answer[]" value="{{reponse.id}}"> {{reponse.textReponse}} <br />
+        {% endfor %}
+
+        <button style="margin-top: 1%;"> Envoyer </button>
+    </form>
+
+    <a href="{{ path('questions_index') }}">back to list</a>
+
+    <a href="{{ path('questions_edit', {'id': question.id}) }}">edit</a>
+
+    {{ include('questions/_delete_form.html.twig') }}
+{% endblock %}
