@@ -54,7 +54,7 @@ class Resultats
         return $this->reponse;
     }
 
-    public function setReponse(string $reponse): self
+    public function setReponse(?reponses $reponse): self
     {
         $this->reponse = $reponse;
 
