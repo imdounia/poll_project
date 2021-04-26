@@ -36,8 +36,8 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
     # - { path: ^/admin, roles: ROLE_ADMIN }
-    #- { path: ^/questions/resultats, roles: PUBLIC_ACCESS }
+    - { path: ^/questions/resultats, roles: PUBLIC_ACCESS }
     - { path: ^/questions/edit, roles: ROLE_USER }
-    #- { path: ^/reponses, roles: ROLE_USER }
+    - { path: ^/reponses, roles: ROLE_USER }
     - { path: ^/questions/new, roles: ROLE_USER }
     - { path: ^/questions, roles: PUBLIC_ACCESS }
