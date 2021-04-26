@@ -3,18 +3,19 @@
 {% block title %}Questions index{% endblock %}
 
 {% block body %}
+<main style="margin: 10%; text-align:center">
     <h1>Questions index</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Text_question</th>
+                <th>Question</th>
                 <th>Is_multiple</th>
-                <th>Répondre au sondage</th>
-                <th>Modifier réponse</th>
-                <th>Montrer les résultats</th>
-                <th>Modifier</th>
+                <th>Answer Poll</th>
+                <th>Update answer</th>
+                <th>Show results</th>
+                <th>Update</th>
             </tr>
         </thead>
         <tbody>
@@ -24,16 +25,16 @@
                 <td>{{ question.textQuestion }}</td>
                 <td>{{ question.isMultiple ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('questions_show', {'id': question.id}) }}">show</a>
+                    <a href="{{ path('questions_show', {'id': question.id}) }}">Answer</a>
                 </td>
                 <td>
-                    <a href="{{ path('reponses_index', {'id': question.id}) }}">show</a>
+                    <a href="{{ path('reponses_index', {'id': question.id}) }}">update</a>
                 </td>
                 <td>
-                    <a href="{{ path('questions_results', {'id': question.id}) }}">Résultats</a>
+                    <a href="{{ path('questions_results', {'id': question.id}) }}">Results</a>
                 </td>
                 <td>
-                    <a href="{{ path('questions_edit', {'id': question.id}) }}">edit</a>
+                    <a href="{{ path('questions_edit', {'id': question.id}) }}">Edit</a>
                 </td>
             </tr>
         {% else %}
@@ -44,5 +45,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('questions_new') }}">Create new</a>
+    <a href="{{ path('questions_new') }}">Create new question</a>
+
+    </main>
 {% endblock %}
